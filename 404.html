@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Moved — NHS Cancer Waiting Times Dashboard</title>
+<script>
+  // The Cancer Waiting Times dashboard has moved to the waiting-times site at
+  // /waiting-times/cancer/. Preserve the path (e.g. compare.html), query
+  // (?org=, ?std=, ?range=, ?england=) and hash so existing deep links resolve.
+  (function(){
+    var base = "https://drjmartins.github.io/waiting-times/cancer";
+    var rest = location.pathname.replace(/^\/cancer-waiting-times/, "");
+    if (rest === "" || rest === "/") rest = "/";
+    location.replace(base + rest + location.search + location.hash);
+  })();
+</script>
+<meta http-equiv="refresh" content="0;url=https://drjmartins.github.io/waiting-times/cancer/">
+</head>
+<body style="font-family:Georgia,serif;max-width:640px;margin:80px auto;padding:0 24px;color:#11202b">
+  <h1 style="font-size:22px">This dashboard has moved</h1>
+  <p>The NHS Cancer Waiting Times dashboard is now part of the
+     <a href="https://drjmartins.github.io/waiting-times/">NHS Waiting Times dashboards</a>.</p>
+  <p>If you are not redirected automatically, open
+     <a href="https://drjmartins.github.io/waiting-times/cancer/">…/waiting-times/cancer/</a>.</p>
+</body>
+</html>
